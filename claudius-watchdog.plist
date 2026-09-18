@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.jumpcup.claudius-watchdog</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/svelaga/Documents/jumpcup/watchdog.sh</string>
+  </array>
+  <key>RunAtLoad</key><true/>
+  <key>StartInterval</key><integer>300</integer>
+  <key>StandardOutPath</key><string>/Users/svelaga/Documents/jumpcup/logs/watchdog.out</string>
+  <key>StandardErrorPath</key><string>/Users/svelaga/Documents/jumpcup/logs/watchdog.out</string>
+  <key>WorkingDirectory</key><string>/Users/svelaga/Documents/jumpcup</string>
+</dict>
+</plist>

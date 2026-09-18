@@ -1,0 +1,14 @@
+{
+ "scored_at": "2026-06-23T06:31:52.786416+00:00",
+ "settled_markets_in_dump": 0,
+ "matched_to_ledger": 0,
+ "results": {
+  "by_tier": {},
+  "by_kind": {},
+  "overall": {
+   "n": 0,
+   "cand_brier": null,
+   "floor_brier": null
+  }
+ }
+}

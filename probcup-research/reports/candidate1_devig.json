@@ -1,0 +1,391 @@
+{
+ "oneXtwo": {
+  "title": "1X2 closing-line de-vig (benchmark: Avg_close+shin = live-bot style)",
+  "baseline": [
+   "Avg_close",
+   "shin"
+  ],
+  "rows": [
+   {
+    "source": "Pinnacle_close",
+    "method": "power",
+    "n": 41016,
+    "brier": 0.5888839565935481,
+    "logloss": 0.9871367403684087
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "additive",
+    "n": 41016,
+    "brier": 0.5889000735308917,
+    "logloss": 0.9871618973461007
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "shin",
+    "n": 41016,
+    "brier": 0.5889280590656445,
+    "logloss": 0.9872148542301872
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "log",
+    "n": 41016,
+    "brier": 0.5889287220904411,
+    "logloss": 0.9872267659271202
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "multiplicative",
+    "n": 41016,
+    "brier": 0.5890757158843566,
+    "logloss": 0.9874983753059152
+   },
+   {
+    "source": "Max_close",
+    "method": "power",
+    "n": 38723,
+    "brier": 0.5897394620374743,
+    "logloss": 0.9883457524368097
+   },
+   {
+    "source": "Max_close",
+    "method": "shin",
+    "n": 38723,
+    "brier": 0.589756372851439,
+    "logloss": 0.9883717924485091
+   },
+   {
+    "source": "Max_close",
+    "method": "log",
+    "n": 38723,
+    "brier": 0.5897617901491373,
+    "logloss": 0.9883929840655098
+   },
+   {
+    "source": "Max_close",
+    "method": "additive",
+    "n": 38723,
+    "brier": 0.5898007965665502,
+    "logloss": 0.9884367755798112
+   },
+   {
+    "source": "Avg_close",
+    "method": "power",
+    "n": 38724,
+    "brier": 0.5898034875429571,
+    "logloss": 0.9884370670942809,
+    "d_vs_base": -6.664801795449099e-05,
+    "p_not_better": 0.01225
+   },
+   {
+    "source": "Max_close",
+    "method": "multiplicative",
+    "n": 38723,
+    "brier": 0.5898072140530997,
+    "logloss": 0.9884756341465349
+   },
+   {
+    "source": "Avg_close",
+    "method": "additive",
+    "n": 38724,
+    "brier": 0.5898164623502062,
+    "logloss": 0.9884345255557055,
+    "d_vs_base": -5.367321070524371e-05,
+    "p_not_better": 0.00475
+   },
+   {
+    "source": "Avg_close",
+    "method": "shin",
+    "n": 38724,
+    "brier": 0.5898701355609115,
+    "logloss": 0.9885537425337358,
+    "d_vs_base": 0.0,
+    "p_not_better": 1.0
+   },
+   {
+    "source": "Avg_close",
+    "method": "log",
+    "n": 38724,
+    "brier": 0.5898863049038222,
+    "logloss": 0.9886230890516254,
+    "d_vs_base": 1.6169342910655963e-05,
+    "p_not_better": 0.94625
+   },
+   {
+    "source": "Avg_close",
+    "method": "multiplicative",
+    "n": 38724,
+    "brier": 0.5901904832668947,
+    "logloss": 0.9891725687428565,
+    "d_vs_base": 0.00032034770598313574,
+    "p_not_better": 1.0
+   },
+   {
+    "source": "Bet365_close",
+    "method": "power",
+    "n": 38717,
+    "brier": 0.5902805248975714,
+    "logloss": 0.989344918514812
+   },
+   {
+    "source": "Bet365_close",
+    "method": "additive",
+    "n": 38717,
+    "brier": 0.5903022207193842,
+    "logloss": 0.9893931022435004
+   },
+   {
+    "source": "Bet365_close",
+    "method": "log",
+    "n": 38717,
+    "brier": 0.5903167027779015,
+    "logloss": 0.9894389476444545
+   },
+   {
+    "source": "Bet365_close",
+    "method": "shin",
+    "n": 38717,
+    "brier": 0.5903267417675555,
+    "logloss": 0.9894402315525619
+   },
+   {
+    "source": "Bet365_close",
+    "method": "multiplicative",
+    "n": 38717,
+    "brier": 0.5906019716106004,
+    "logloss": 0.9899592949767204
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "power",
+    "n": 40830,
+    "brier": 0.5911872706333007,
+    "logloss": 0.9906252636471604
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "additive",
+    "n": 40830,
+    "brier": 0.5912060031829176,
+    "logloss": 0.9906671745578907
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "log",
+    "n": 40830,
+    "brier": 0.5912286575299808,
+    "logloss": 0.9907110247627692
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "shin",
+    "n": 40830,
+    "brier": 0.5912317048160436,
+    "logloss": 0.9907124942799213
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "multiplicative",
+    "n": 40830,
+    "brier": 0.591389945480537,
+    "logloss": 0.9910107376859727
+   },
+   {
+    "source": "Avg_open",
+    "method": "power",
+    "n": 38716,
+    "brier": 0.5922796328311334,
+    "logloss": 0.9920987228840324
+   },
+   {
+    "source": "Avg_open",
+    "method": "additive",
+    "n": 38716,
+    "brier": 0.5922956140245438,
+    "logloss": 0.992113471248507
+   },
+   {
+    "source": "Avg_open",
+    "method": "shin",
+    "n": 38716,
+    "brier": 0.5923445651445034,
+    "logloss": 0.9922168118177238
+   },
+   {
+    "source": "Avg_open",
+    "method": "log",
+    "n": 38716,
+    "brier": 0.5923553745674917,
+    "logloss": 0.992268728066064
+   },
+   {
+    "source": "Avg_open",
+    "method": "multiplicative",
+    "n": 38716,
+    "brier": 0.5926553191196583,
+    "logloss": 0.9928079665163793
+   }
+  ]
+ },
+ "over_under": {
+  "title": "Over/Under 2.5 closing-line de-vig (benchmark: Avg_close+power)",
+  "baseline": [
+   "Avg_close",
+   "power"
+  ],
+  "rows": [
+   {
+    "source": "Pinnacle_close",
+    "method": "power",
+    "n": 35472,
+    "brier": 0.2393992950671661,
+    "logloss": 0.6714614865895351
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "log",
+    "n": 35472,
+    "brier": 0.2394021980163473,
+    "logloss": 0.6714723718345162
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "shin",
+    "n": 35472,
+    "brier": 0.2394030207353777,
+    "logloss": 0.671475317435965
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "additive",
+    "n": 35472,
+    "brier": 0.23940306155328386,
+    "logloss": 0.6714754077324941
+   },
+   {
+    "source": "Pinnacle_close",
+    "method": "multiplicative",
+    "n": 35472,
+    "brier": 0.23943076401386473,
+    "logloss": 0.671546214421564
+   },
+   {
+    "source": "Bet365_close",
+    "method": "log",
+    "n": 38713,
+    "brier": 0.23945535301795798,
+    "logloss": 0.6715706322077174
+   },
+   {
+    "source": "Bet365_close",
+    "method": "power",
+    "n": 38713,
+    "brier": 0.23945652335021653,
+    "logloss": 0.6715717980219407
+   },
+   {
+    "source": "Bet365_close",
+    "method": "shin",
+    "n": 38713,
+    "brier": 0.23945693932842485,
+    "logloss": 0.6715747171149808
+   },
+   {
+    "source": "Bet365_close",
+    "method": "additive",
+    "n": 38713,
+    "brier": 0.23945709216403577,
+    "logloss": 0.6715750263111276
+   },
+   {
+    "source": "Avg_close",
+    "method": "log",
+    "n": 38723,
+    "brier": 0.23947205226571297,
+    "logloss": 0.6716056710349659,
+    "d_vs_base": -6.013695248206695e-08,
+    "p_not_better": 0.51025
+   },
+   {
+    "source": "Avg_close",
+    "method": "power",
+    "n": 38723,
+    "brier": 0.2394721124026654,
+    "logloss": 0.6716021867683316,
+    "d_vs_base": 0.0,
+    "p_not_better": 1.0
+   },
+   {
+    "source": "Avg_close",
+    "method": "shin",
+    "n": 38723,
+    "brier": 0.23947294255225393,
+    "logloss": 0.6716089557120055,
+    "d_vs_base": 8.30149588492084e-07,
+    "p_not_better": 0.533
+   },
+   {
+    "source": "Avg_close",
+    "method": "additive",
+    "n": 38723,
+    "brier": 0.23947299418917453,
+    "logloss": 0.6716090623222979,
+    "d_vs_base": 8.817865091091255e-07,
+    "p_not_better": 0.534
+   },
+   {
+    "source": "Bet365_close",
+    "method": "multiplicative",
+    "n": 38713,
+    "brier": 0.2395046525951249,
+    "logloss": 0.6716850357923729
+   },
+   {
+    "source": "Avg_close",
+    "method": "multiplicative",
+    "n": 38723,
+    "brier": 0.239525424827794,
+    "logloss": 0.6717341869763828,
+    "d_vs_base": 5.331242512854379e-05,
+    "p_not_better": 0.90175
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "power",
+    "n": 35342,
+    "brier": 0.24059470243793551,
+    "logloss": 0.6739671616058853
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "log",
+    "n": 35342,
+    "brier": 0.2405991225447538,
+    "logloss": 0.6739799471646506
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "shin",
+    "n": 35342,
+    "brier": 0.24060004145034508,
+    "logloss": 0.673982788852388
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "additive",
+    "n": 35342,
+    "brier": 0.2406000414503452,
+    "logloss": 0.6739827888523883
+   },
+   {
+    "source": "Pinnacle_open",
+    "method": "multiplicative",
+    "n": 35342,
+    "brier": 0.2406318998280789,
+    "logloss": 0.6740591487123874
+   }
+  ]
+ },
+ "rows_total": 44251
+}

@@ -1,0 +1,29 @@
+{
+ "totals_model_vs_market": {
+  "market_close": {
+   "brier": 0.23968121998191047,
+   "logloss": 0.6720423117793336
+  },
+  "goals_model": {
+   "brier": 0.2520339849128095,
+   "logloss": 0.6986761406233014
+  },
+  "blend_50_50": {
+   "brier": 0.24308019740645326,
+   "logloss": 0.6791107540656999
+  },
+  "model_minus_market_brier": 0.012352764930899025,
+  "p_model_not_better": 1.0,
+  "blend_minus_market_brier": 0.003398977424542776,
+  "p_blend_not_better": 1.0,
+  "n": 13324
+ },
+ "discipline_calibration": {
+  "n": 16533,
+  "emp_P_ge1_red": 0.17431803060545575,
+  "reds_per_match": 0.1977257606000121,
+  "floor_red_lambda_total": 0.26,
+  "floor_implied_P_ge1_red": 0.22894841419643375,
+  "floor_pen_or_red": 0.3363497498636806
+ }
+}

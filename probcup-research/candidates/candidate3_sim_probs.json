@@ -1,0 +1,448 @@
+{
+  "meta": {
+    "N_sims": 50000,
+    "rng_seed": 0,
+    "elo_source": "jumpbot/ratings.py ELO dict (static June-2026 prior)",
+    "group_draw_source": "real 2026 WC final draw (Wikipedia draw page, cross-checked ESPN/Sky group pages)",
+    "market_book": "williamhill outright (FIFA World Cup Winner), snapshot fetched_ts in oddsapi_wc_winner.json",
+    "market_booksum_overround": 1.2029405090673473,
+    "devig_method_primary": "power",
+    "knockout_mapping": "Elo logistic win prob (scale 400), no draws; field of 32 exact, bracket PAIRINGS randomized per sim (real bracket is fixed by group position, not modeled)",
+    "draw_model": "logistic expected score; draw band base 0.27 decaying with mismatch; 3/1/0 points; tiebreak points then elo+noise proxy for GD",
+    "actionability": "NO outright/group futures market currently open on contest board -> research/parked, not actionable in-window"
+  },
+  "teams": {
+    "FRA": {
+      "team": "France",
+      "market_implied_pct": 17.7902,
+      "market_implied_mult_pct": 16.6259,
+      "sim_win_pct": 14.978,
+      "divergence_pp": -2.8122,
+      "sim_reach_r32_pct": 98.472,
+      "sim_win_group_pct": 77.082
+    },
+    "ESP": {
+      "team": "Spain",
+      "market_implied_pct": 14.6298,
+      "market_implied_mult_pct": 13.8549,
+      "sim_win_pct": 12.224,
+      "divergence_pp": -2.4058,
+      "sim_reach_r32_pct": 98.778,
+      "sim_win_group_pct": 75.112
+    },
+    "ENG": {
+      "team": "England",
+      "market_implied_pct": 12.4,
+      "market_implied_mult_pct": 11.8757,
+      "sim_win_pct": 5.786,
+      "divergence_pp": -6.614,
+      "sim_reach_r32_pct": 96.098,
+      "sim_win_group_pct": 63.002
+    },
+    "ARG": {
+      "team": "Argentina",
+      "market_implied_pct": 11.5154,
+      "market_implied_mult_pct": 11.084,
+      "sim_win_pct": 16.064,
+      "divergence_pp": 4.5486,
+      "sim_reach_r32_pct": 99.168,
+      "sim_win_group_pct": 83.48
+    },
+    "POR": {
+      "team": "Portugal",
+      "market_implied_pct": 6.3829,
+      "market_implied_mult_pct": 6.3946,
+      "sim_win_pct": 6.856,
+      "divergence_pp": 0.4731,
+      "sim_reach_r32_pct": 97.25,
+      "sim_win_group_pct": 69.664
+    },
+    "BRA": {
+      "team": "Brazil",
+      "market_implied_pct": 5.4746,
+      "market_implied_mult_pct": 5.542,
+      "sim_win_pct": 17.866,
+      "divergence_pp": 12.3914,
+      "sim_reach_r32_pct": 99.46,
+      "sim_win_group_pct": 82.528
+    },
+    "GER": {
+      "team": "Germany",
+      "market_implied_pct": 5.4746,
+      "market_implied_mult_pct": 5.542,
+      "sim_win_pct": 6.194,
+      "divergence_pp": 0.7194,
+      "sim_reach_r32_pct": 98.188,
+      "sim_win_group_pct": 73.638
+    },
+    "NED": {
+      "team": "Netherlands",
+      "market_implied_pct": 5.4746,
+      "market_implied_mult_pct": 5.542,
+      "sim_win_pct": 5.114,
+      "divergence_pp": -0.3606,
+      "sim_reach_r32_pct": 95.382,
+      "sim_win_group_pct": 66.882
+    },
+    "MAR": {
+      "team": "Morocco",
+      "market_implied_pct": 2.6991,
+      "market_implied_mult_pct": 2.8665,
+      "sim_win_pct": 0.614,
+      "divergence_pp": -2.0851,
+      "sim_reach_r32_pct": 88.426,
+      "sim_win_group_pct": 11.892
+    },
+    "NOR": {
+      "team": "Norway",
+      "market_implied_pct": 2.6991,
+      "market_implied_mult_pct": 2.8665,
+      "sim_win_pct": 0.532,
+      "divergence_pp": -2.1671,
+      "sim_reach_r32_pct": 78.888,
+      "sim_win_group_pct": 10.484
+    },
+    "USA": {
+      "team": "USA",
+      "market_implied_pct": 2.2757,
+      "market_implied_mult_pct": 2.445,
+      "sim_win_pct": 0.32,
+      "divergence_pp": -1.9557,
+      "sim_reach_r32_pct": 79.288,
+      "sim_win_group_pct": 31.8
+    },
+    "JPN": {
+      "team": "Japan",
+      "market_implied_pct": 1.8616,
+      "market_implied_mult_pct": 2.0276,
+      "sim_win_pct": 0.374,
+      "divergence_pp": -1.4876,
+      "sim_reach_r32_pct": 74.984,
+      "sim_win_group_pct": 16.254
+    },
+    "MEX": {
+      "team": "Mexico",
+      "market_implied_pct": 1.473,
+      "market_implied_mult_pct": 1.63,
+      "sim_win_pct": 0.494,
+      "divergence_pp": -0.979,
+      "sim_reach_r32_pct": 83.834,
+      "sim_win_group_pct": 41.504
+    },
+    "BEL": {
+      "team": "Belgium",
+      "market_implied_pct": 1.473,
+      "market_implied_mult_pct": 1.63,
+      "sim_win_pct": 3.642,
+      "divergence_pp": 2.169,
+      "sim_reach_r32_pct": 96.538,
+      "sim_win_group_pct": 68.116
+    },
+    "COL": {
+      "team": "Colombia",
+      "market_implied_pct": 1.473,
+      "market_implied_mult_pct": 1.63,
+      "sim_win_pct": 1.07,
+      "divergence_pp": -0.403,
+      "sim_reach_r32_pct": 88.162,
+      "sim_win_group_pct": 21.564
+    },
+    "SUI": {
+      "team": "Switzerland",
+      "market_implied_pct": 0.8968,
+      "market_implied_mult_pct": 1.0263,
+      "sim_win_pct": 0.614,
+      "divergence_pp": -0.2828,
+      "sim_reach_r32_pct": 87.048,
+      "sim_win_group_pct": 47.858
+    },
+    "CAN": {
+      "team": "Canada",
+      "market_implied_pct": 0.5583,
+      "market_implied_mult_pct": 0.6598,
+      "sim_win_pct": 0.128,
+      "divergence_pp": -0.4303,
+      "sim_reach_r32_pct": 74.202,
+      "sim_win_group_pct": 24.776
+    },
+    "CRO": {
+      "team": "Croatia",
+      "market_implied_pct": 0.5583,
+      "market_implied_mult_pct": 0.6598,
+      "sim_win_pct": 1.968,
+      "divergence_pp": 1.4097,
+      "sim_reach_r32_pct": 91.194,
+      "sim_win_group_pct": 28.008
+    },
+    "CIV": {
+      "team": "Ivory Coast",
+      "market_implied_pct": 0.4597,
+      "market_implied_mult_pct": 0.5505,
+      "sim_win_pct": 0.184,
+      "divergence_pp": -0.2757,
+      "sim_reach_r32_pct": 75.894,
+      "sim_win_group_pct": 11.218
+    },
+    "SWE": {
+      "team": "Sweden",
+      "market_implied_pct": 0.4597,
+      "market_implied_mult_pct": 0.5505,
+      "sim_win_pct": 0.126,
+      "divergence_pp": -0.3337,
+      "sim_reach_r32_pct": 58.45,
+      "sim_win_group_pct": 9.81
+    },
+    "SEN": {
+      "team": "Senegal",
+      "market_implied_pct": 0.4597,
+      "market_implied_mult_pct": 0.5505,
+      "sim_win_pct": 0.504,
+      "divergence_pp": 0.0443,
+      "sim_reach_r32_pct": 78.962,
+      "sim_win_group_pct": 10.796
+    },
+    "AUT": {
+      "team": "Austria",
+      "market_implied_pct": 0.4597,
+      "market_implied_mult_pct": 0.5505,
+      "sim_win_pct": 0.224,
+      "divergence_pp": -0.2357,
+      "sim_reach_r32_pct": 75.862,
+      "sim_win_group_pct": 8.854
+    },
+    "URU": {
+      "team": "Uruguay",
+      "market_implied_pct": 0.3383,
+      "market_implied_mult_pct": 0.4136,
+      "sim_win_pct": 1.89,
+      "divergence_pp": 1.5517,
+      "sim_reach_r32_pct": 93.114,
+      "sim_win_group_pct": 20.552
+    },
+    "KOR": {
+      "team": "South Korea",
+      "market_implied_pct": 0.2665,
+      "market_implied_mult_pct": 0.3312,
+      "sim_win_pct": 0.132,
+      "divergence_pp": -0.1345,
+      "sim_reach_r32_pct": 69.03,
+      "sim_win_group_pct": 20.97
+    },
+    "SCO": {
+      "team": "Scotland",
+      "market_implied_pct": 0.2665,
+      "market_implied_mult_pct": 0.3312,
+      "sim_win_pct": 0.084,
+      "divergence_pp": -0.1825,
+      "sim_reach_r32_pct": 64.356,
+      "sim_win_group_pct": 4.962
+    },
+    "PAR": {
+      "team": "Paraguay",
+      "market_implied_pct": 0.2665,
+      "market_implied_mult_pct": 0.3312,
+      "sim_win_pct": 0.064,
+      "divergence_pp": -0.2025,
+      "sim_reach_r32_pct": 57.528,
+      "sim_win_group_pct": 14.62
+    },
+    "AUS": {
+      "team": "Australia",
+      "market_implied_pct": 0.2665,
+      "market_implied_mult_pct": 0.3312,
+      "sim_win_pct": 0.046,
+      "divergence_pp": -0.2205,
+      "sim_reach_r32_pct": 53.59,
+      "sim_win_group_pct": 13.542
+    },
+    "ECU": {
+      "team": "Ecuador",
+      "market_implied_pct": 0.2665,
+      "market_implied_mult_pct": 0.3312,
+      "sim_win_pct": 0.262,
+      "divergence_pp": -0.0045,
+      "sim_reach_r32_pct": 81.238,
+      "sim_win_group_pct": 13.744
+    },
+    "EGY": {
+      "team": "Egypt",
+      "market_implied_pct": 0.2665,
+      "market_implied_mult_pct": 0.3312,
+      "sim_win_pct": 0.18,
+      "divergence_pp": -0.0865,
+      "sim_reach_r32_pct": 75.146,
+      "sim_win_group_pct": 15.052
+    },
+    "GHA": {
+      "team": "Ghana",
+      "market_implied_pct": 0.186,
+      "market_implied_mult_pct": 0.2368,
+      "sim_win_pct": 0.042,
+      "divergence_pp": -0.144,
+      "sim_reach_r32_pct": 46.022,
+      "sim_win_group_pct": 5.478
+    },
+    "CZE": {
+      "team": "Czech Republic",
+      "market_implied_pct": 0.127,
+      "market_implied_mult_pct": 0.1659,
+      "sim_win_pct": 0.244,
+      "divergence_pp": 0.117,
+      "sim_reach_r32_pct": 74.964,
+      "sim_win_group_pct": 26.002
+    },
+    "BIH": {
+      "team": "Bosnia & Herzegovina",
+      "market_implied_pct": 0.127,
+      "market_implied_mult_pct": 0.1659,
+      "sim_win_pct": 0.066,
+      "divergence_pp": -0.061,
+      "sim_reach_r32_pct": 60.494,
+      "sim_win_group_pct": 16.392
+    },
+    "ALG": {
+      "team": "Algeria",
+      "market_implied_pct": 0.127,
+      "market_implied_mult_pct": 0.1659,
+      "sim_win_pct": 0.132,
+      "divergence_pp": 0.005,
+      "sim_reach_r32_pct": 65.496,
+      "sim_win_group_pct": 6.078
+    },
+    "IRN": {
+      "team": "Iran",
+      "market_implied_pct": 0.0823,
+      "market_implied_mult_pct": 0.1107,
+      "sim_win_pct": 0.176,
+      "divergence_pp": 0.0937,
+      "sim_reach_r32_pct": 72.506,
+      "sim_win_group_pct": 13.616
+    },
+    "COD": {
+      "team": "DR Congo",
+      "market_implied_pct": 0.0823,
+      "market_implied_mult_pct": 0.1107,
+      "sim_win_pct": 0.03,
+      "divergence_pp": -0.0523,
+      "sim_reach_r32_pct": 40.594,
+      "sim_win_group_pct": 4.802
+    },
+    "NZL": {
+      "team": "New Zealand",
+      "market_implied_pct": 0.0604,
+      "market_implied_mult_pct": 0.083,
+      "sim_win_pct": 0.006,
+      "divergence_pp": -0.0544,
+      "sim_reach_r32_pct": 24.742,
+      "sim_win_group_pct": 3.216
+    },
+    "CPV": {
+      "team": "Cape Verde",
+      "market_implied_pct": 0.0604,
+      "market_implied_mult_pct": 0.083,
+      "sim_win_pct": 0.002,
+      "divergence_pp": -0.0584,
+      "sim_reach_r32_pct": 22.894,
+      "sim_win_group_pct": 1.776
+    },
+    "KSA": {
+      "team": "Saudi Arabia",
+      "market_implied_pct": 0.0604,
+      "market_implied_mult_pct": 0.083,
+      "sim_win_pct": 0.018,
+      "divergence_pp": -0.0424,
+      "sim_reach_r32_pct": 31.494,
+      "sim_win_group_pct": 2.56
+    },
+    "RSA": {
+      "team": "South Africa",
+      "market_implied_pct": 0.0391,
+      "market_implied_mult_pct": 0.0554,
+      "sim_win_pct": 0.046,
+      "divergence_pp": 0.0069,
+      "sim_reach_r32_pct": 47.112,
+      "sim_win_group_pct": 11.524
+    },
+    "UZB": {
+      "team": "Uzbekistan",
+      "market_implied_pct": 0.0391,
+      "market_implied_mult_pct": 0.0554,
+      "sim_win_pct": 0.02,
+      "divergence_pp": -0.0191,
+      "sim_reach_r32_pct": 33.692,
+      "sim_win_group_pct": 3.97
+    },
+    "PAN": {
+      "team": "Panama",
+      "market_implied_pct": 0.0391,
+      "market_implied_mult_pct": 0.0554,
+      "sim_win_pct": 0.014,
+      "divergence_pp": -0.0251,
+      "sim_reach_r32_pct": 29.896,
+      "sim_win_group_pct": 3.512
+    },
+    "CUW": {
+      "team": "Cura\u00e7ao",
+      "market_implied_pct": 0.0226,
+      "market_implied_mult_pct": 0.0332,
+      "sim_win_pct": 0.0,
+      "divergence_pp": -0.0226,
+      "sim_reach_r32_pct": 14.296,
+      "sim_win_group_pct": 1.4
+    },
+    "IRQ": {
+      "team": "Iraq",
+      "market_implied_pct": 0.0226,
+      "market_implied_mult_pct": 0.0332,
+      "sim_win_pct": 0.004,
+      "divergence_pp": -0.0186,
+      "sim_reach_r32_pct": 18.51,
+      "sim_win_group_pct": 1.638
+    },
+    "JOR": {
+      "team": "Jordan",
+      "market_implied_pct": 0.0226,
+      "market_implied_mult_pct": 0.0332,
+      "sim_win_pct": 0.002,
+      "divergence_pp": -0.0206,
+      "sim_reach_r32_pct": 21.058,
+      "sim_win_group_pct": 1.588
+    },
+    "QAT": {
+      "team": "Qatar",
+      "market_implied_pct": 0.0158,
+      "market_implied_mult_pct": 0.0237,
+      "sim_win_pct": 0.026,
+      "divergence_pp": 0.0102,
+      "sim_reach_r32_pct": 46.524,
+      "sim_win_group_pct": 10.974
+    },
+    "HAI": {
+      "team": "Haiti",
+      "market_implied_pct": 0.0,
+      "market_implied_mult_pct": 0.0,
+      "sim_win_pct": 0.0,
+      "divergence_pp": 0.0,
+      "sim_reach_r32_pct": 11.672,
+      "sim_win_group_pct": 0.618
+    },
+    "TUR": {
+      "team": "TUR",
+      "market_implied_pct": 0.0,
+      "market_implied_mult_pct": 0.0,
+      "sim_win_pct": 0.582,
+      "divergence_pp": 0.582,
+      "sim_reach_r32_pct": 83.654,
+      "sim_win_group_pct": 40.038
+    },
+    "TUN": {
+      "team": "Tunisia",
+      "market_implied_pct": 0.0,
+      "market_implied_mult_pct": 0.0,
+      "sim_win_pct": 0.056,
+      "divergence_pp": 0.056,
+      "sim_reach_r32_pct": 45.85,
+      "sim_win_group_pct": 7.054
+    }
+  }
+}
